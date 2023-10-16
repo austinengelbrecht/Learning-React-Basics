@@ -1,9 +1,16 @@
+const Pet = () => {
+  return React.createElement("div", {}, [
+    React.createElement("h1", {}, "Daisy"),
+    React.createElement("h2", {}, "Dog"),
+    React.createElement("h2", {}, "German Shepherd"),
+  ]);
+};
+
 const App = () => {
-  return React.createElement(
-    "div",
-    {},
-    React.createElement("h1", {}, "Adopt Me")
-  );
+  return React.createElement("div", {}, [
+    React.createElement("h1", {}, "Adopt Me"),
+    React.createElement(Pet),
+  ]);
 };
 
 const container = document.getElementById("root");
