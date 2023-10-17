@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
 
-const QueryClient = new QueryClient({
+const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: Infinity,
@@ -17,7 +17,7 @@ const QueryClient = new QueryClient({
 const App = () => {
   return (
     <BrowserRouter>
-      <QueryClientProvider client={QueryClient}>
+      <QueryClientProvider client={queryClient}>
         <header>
           <Link to="/">Adopt ME</Link>
         </header>
